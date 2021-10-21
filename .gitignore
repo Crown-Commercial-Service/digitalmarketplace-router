@@ -5,3 +5,4 @@ __pycache__/
 .envrc
 docker-compose.yml
 venv*
+.idea/
