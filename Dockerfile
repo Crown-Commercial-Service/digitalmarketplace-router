@@ -1,10 +1,10 @@
-FROM nginx:1.21.3
+FROM nginx:1.21.4
 
 ENV APP_DIR /app
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-                    python3.7 python3-setuptools python3-pip && \
+                    python3.9 python3-setuptools python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
     pip3 install --no-cache-dir supervisor==4.2.2 awscli awscli-cwlogs && \
     aws configure set plugins.cwlogs cwlogs && \
